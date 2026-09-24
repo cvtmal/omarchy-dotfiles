@@ -1,10 +1,10 @@
-# dotfiles
+# omarchy-dotfiles
 
 My changes on top of a stock [Omarchy](https://omarchy.org) install. Only what differs from Omarchy's defaults lives here; everything else stays with Omarchy so `omarchy update` keeps working.
 
 ```bash
-git clone https://github.com/cvtmal/dotfiles.git ~/Work/dotfiles
-~/Work/dotfiles/install.sh
+git clone https://github.com/cvtmal/omarchy-dotfiles.git ~/Work/omarchy-dotfiles
+~/Work/omarchy-dotfiles/install.sh
 ```
 
 | Script | What it does |
@@ -19,6 +19,21 @@ All scripts are safe to run again.
 ## What's in it
 
 - **Keyboard**: Swiss German Mac layout (`ch`/`de_mac`), Caps Lock as compose, left Alt as AltGr, flat mouse accel, natural scrolling. See `home/.config/hypr/input.lua`.
+- **Mac shortcuts** for the Swiss Mac layout in `home/.config/hypr/bindings.lua`:
+
+  | Keys | Action |
+  | --- | --- |
+  | `Cmd + C` `V` `X` | Copy, paste, cut (Omarchy's universal clipboard) |
+  | `Cmd + Z` `A` | Undo, select all |
+  | `Cmd + T` `W` `L` `R` | New tab (new terminal in a terminal), close tab, address bar, reload |
+  | `Cmd + Shift + ü` `¨` | Previous tab, next tab (the US `[` `]` keys) |
+  | `Cmd + ←` `→` `↑` `↓` | Line start, line end, document start, document end |
+  | `Option + ←` `→` | Word left, word right |
+  | `Cmd + Backspace` | Delete to line start |
+  | `Option + Backspace` | Delete word left |
+  | `Cmd + Q` | Close window |
+
+  The Omarchy actions these replace moved to `Cmd + Option`: `T` float/tile, `L` workspace layout, `Backspace` transparency, arrows to focus windows.
 - **Terminals**: Ghostty as default; font size 8 in Ghostty, Alacritty and Kitty.
 - **Bar**: transparent Omarchy shell bar (`home/.config/omarchy/shell.json`), UI font size 11 (`shell.toml`).
 - **Git**: Omarchy's git defaults plus `gh` as GitHub credential helper.
